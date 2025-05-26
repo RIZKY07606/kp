@@ -74,6 +74,27 @@
             text-align: center;
             }
         }
+
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 999;
+            background: #8B7B69;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 1.7rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #backToTopBtn:hover {
+            background: #756857;
+        }
     </style>
     
     @stack('styles')
@@ -92,8 +113,26 @@
     <!-- Footer -->
     @include('partials.footer')
 
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Kembali ke atas">&#8679;</button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @stack('scripts')
+
+    <script>
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
 </body>
 </html>

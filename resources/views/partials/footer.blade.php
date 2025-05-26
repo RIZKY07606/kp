@@ -33,7 +33,7 @@
                                     <a href="/about" class="text-decoration-none text-dark">About</a>
                                 </li>
                                 <li class="mb-2">
-                                    <a href="/services" class="text-decoration-none text-dark">Services</a>
+                                    <a href="/service" class="text-decoration-none text-dark">Service</a>
                                 </li>
                             </ul>
                         </div>
