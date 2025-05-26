@@ -26,3 +26,5 @@ Route::get('/', function () {
 Route::view('/home', 'home')->name('home');
 
 Route::view('/blog', 'blog');
+
+Route::view('/service', 'service')->name('service');
