@@ -1,72 +1,53 @@
-/* Footer styles */
+/* Footer Styles */
 .footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.brand-info h3 {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.brand-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.links-section {
+    float: right;
+}
+
+.links-section h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.links-section ul li a {
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.links-section ul li a:hover {
+    color: #8B7B69 !important;
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .brand-info {
+        text-align: center;
+    }
     
-    padding: 2.5rem 9rem 0;
-    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    .links-section {
+        float: none;
+        text-align: center;
+    }
+    
+    .links-section .row {
+        justify-content: center;
+    }
+    
+    .links-section ul {
+        text-align: left;
+    }
 }
-
-.footer-content {
-    display: flex;
-    gap: 2.5rem;
-    align-items: flex-start;
-    padding-bottom: 2.5rem;
-}
-
-.company-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.footer-logo {
-    font-size: 1.125rem;
-    font-weight: 900;
-    color: black;
-}
-
-.company-address {
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.4);
-    font-style: normal;
-}
-
-.footer-nav {
-    display: flex;
-    gap: 2.5rem;
-}
-
-.footer-nav-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style-type: none;
-}
-
-.footer-links a {
-    font-size: 0.875rem;
-    color: rgba(0, 0, 0, 0.6);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.footer-links a:hover {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-.copyright {
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.875rem;
-    color: rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-} 
