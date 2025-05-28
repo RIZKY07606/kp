@@ -1,3 +1,22 @@
+<style>
+    .navbar-nav .nav-link {
+        transition: all 0.1s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        transform: scale(1.05);
+        font-weight: 500;
+        color: #000000 !important; /* Optional: biru saat hover */
+    }
+
+     .navbar-nav .nav-link.active {
+        color: #000000 !important;
+        font-weight: 500;
+    }
+
+</style>
+
+
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -12,23 +31,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/service">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
+    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('portfolio') ? 'active' : '' }}" href="/portfolio">Portfolio</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('service') ? 'active' : '' }}" href="/service">Service</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('blog') ? 'active' : '' }}" href="/blog">Blog</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">Contact</a>
+</li>
+
             </ul>
 
         <div class="ms-lg-3">

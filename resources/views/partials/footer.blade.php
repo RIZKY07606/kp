@@ -3,7 +3,7 @@
         <div class="row g-5">
             <div class="col-md-6 col-12">
                 <div class="brand-info">
-                    <h3 class="fw-bold mb-3" style="color: #8B7B69;">Mugsith Living.</h3>
+                    <h3 class="fw-bold mb-3" style="color: #8B7B69;">Muqsith Living.</h3>
                     <p class="text-muted">
                         JL Ngagel Jaya Selatan I No.26, Pucang Sewu, Kec. Gubeng, Surabaya, Jawa Timur 60283
                     </p>
@@ -33,7 +33,7 @@
                                     <a href="/about" class="text-decoration-none text-dark">About</a>
                                 </li>
                                 <li class="mb-2">
-                                    <a href="/services" class="text-decoration-none text-dark">Services</a>
+                                    <a href="/service" class="text-decoration-none text-dark">Service</a>
                                 </li>
                             </ul>
                         </div>
