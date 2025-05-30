@@ -77,10 +77,15 @@
 @endpush
 
 @section('content')
-<div class="blog-hero-container">
-    <img src="/images/contact-hero.jpg" alt="Blog Hero" class="blog-hero">
-    <div class="blog-title">Blog</div>
+<div class="position-relative blog-hero-container">
+    <img src="/images/contact-hero.jpg" alt="Blog Hero" class="blog-hero w-100">
+    <div class="position-absolute bottom-0 start-50 translate-middle-x text-white text-center w-100 mb-5">
+        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">
+            Blog
+        </h1>
+    </div>
 </div>
+
 <div class="blog-cards">
     @for ($i = 0; $i < 9; $i++)
     <div class="blog-card">
