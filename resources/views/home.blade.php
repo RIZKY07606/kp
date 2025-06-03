@@ -141,8 +141,8 @@
         <h3 class="fw-bold mb-5">Our Services</h3>
         <div class="row g-4">
             <div class="col-md-4">
-        <a href="{{ url('/layanan/desain-arsitektur') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Desain Arsitektur dan Interior</h5>
                 <p style="color: #7a5c3d;">Layanan desain tata ruang bangunan dan bagian dalamnya, mulai dari fasad, denah ruang, hingga tata letak furniture disesuaikan dengan kebutuhan dan gaya hidup.</p>
             </div>
@@ -150,8 +150,8 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{{ url('/layanan/rab-gambar-kerja') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Jasa Hitung RAB / Gambar Kerja</h5>
                 <p style="color: #7a5c3d;">Menyediakan perhitungan Rencana Anggaran Biaya (RAB) proyek secara rinci, plus gambar kerja teknik yang siap digunakan oleh kontraktor di lapangan.</p>
             </div>
@@ -159,8 +159,8 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{{ url('/layanan/furniture-custom') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Jasa Pembuatan Furniture</h5>
                 <p style="color: #7a5c3d;">Pembuatan furniture custom yang selaras dengan desain interior—baik untuk ruang tamu, dapur, kamar, maupun ruang ibadah di rumah.</p>
             </div>
@@ -168,8 +168,8 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{{ url('/layanan/kontraktor-renovasi') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Kontraktor dan Renovasi Bangunan</h5>
                 <p style="color: #7a5c3d;">Pelaksanaan pembangunan dari desain yang telah dibuat—dengan tenaga ahli yang amanah dan profesional. Termasuk jasa renovasi total untuk bangunan lama.</p>
             </div>
@@ -177,8 +177,8 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{{ url('/layanan/visualisasi-arsitektur') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Visualisasi Arsitektur dan Interior</h5>
                 <p style="color: #7a5c3d;">Menyediakan tampilan visual 3D realistis dari desain yang dirancang—untuk memudahkan klien membayangkan hasil akhir sebelum pembangunan dimulai.</p>
             </div>
@@ -186,8 +186,8 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{{ url('/layanan/desain-daring') }}" class="text-decoration-none text-dark">
-            <div class="bg-white p-4 rounded shadow-sm h-100 hover-shadow">
+        <a class="text-decoration-none text-dark">
+            <div class="bg-white p-4">
                 <h5>Jasa Pelayanan Desain dari Jauh</h5>
                 <p style="color: #7a5c3d;">Fokus pada perbaikan atau pembaruan rumah yang sudah ada. Bisa berupa pengubahan layout, penambahan ruangan, atau penyegaran tampilan rumah agar lebih nyaman.</p>
             </div>

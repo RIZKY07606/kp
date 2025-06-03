@@ -30,3 +30,5 @@ Route::view('/blog', 'blog');
 Route::view('/service', 'service')->name('service');
 
 Route::view('/about', 'about')->name('about');
+
+Route::view('/portfolio', 'portfolio')->name('portfolio');
