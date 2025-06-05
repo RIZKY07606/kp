@@ -87,12 +87,12 @@
 </div>
 
 <div class="blog-cards">
-    @for ($i = 0; $i < 9; $i++)
+    @foreach ($blogs as $blog)
     <div class="blog-card">
-        <img src="/images/contact-hero.jpg" alt="Blog Post" class="blog-card-img">
-        <div class="blog-card-title">5 Prinsip Dasar Interior Design agar Rumah Terasa Lebih Luas dan Nyaman</div>
-        <div class="blog-card-desc">Pernah merasa rumah kamu sempit, sumpek, atau kurang nyaman padahal luas bangunannya cukup? Bisa jadi masalahnya bukan di ukuran, tapi di desain interiornya.</div>
+        <img src="{{ $blog->cover_image }}" alt="Blog Post" class="blog-card-img">
+        <div class="blog-card-title">{{ $blog->title }}</div>
+        <div class="blog-card-desc">{{ Str::limit(strip_tags($blog->content), 120) }}</div>
     </div>
-    @endfor
+    @endforeach
 </div>
 @endsection 

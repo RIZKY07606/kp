@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PortfolioController;
 
 
 /*
@@ -27,13 +29,13 @@ Route::get('/', function () {
 
 Route::view('/home', 'home')->name('home');
 
-Route::view('/blog', 'blog');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 Route::view('/service', 'service')->name('service');
 
 Route::view('/about', 'about')->name('about');
 
-Route::view('/portfolio', 'portfolio')->name('portfolio');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
 Route::view('/contact', 'contact')->name('contact');
 

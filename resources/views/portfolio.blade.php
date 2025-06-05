@@ -19,27 +19,33 @@
 <!-- PORTFOLIO GRID -->
 <div class="container pb-5">
     <div class="row g-4">
-        @php
-            $portfolioItems = [
-                ['image' => 'contact-hero.jpg', 'caption' => 'Perumahan Klampis'],
-                ['image' => 'contact-hero.jpg', 'caption' => 'Rumah Raffi Ahmad'],
-                ['image' => 'contact-hero.jpg', 'caption' => 'Perumahan Green Lake'],
-                ['image' => 'contact-hero.jpg', 'caption' => 'D Kos'],
-                ['image' => 'contact-hero.jpg', 'caption' => 'Perumahan Graha Gunawan'],
-                ['image' => 'contact-hero.jpg', 'caption' => 'Vila Asri'],
-            ];
-        @endphp
-
-        @foreach ($portfolioItems as $item)
+        @foreach ($portfolios as $portfolio)
             <div class="col-md-6">
-               <div class="rounded-4 overflow-hidden shadow-sm h-100 bg-white">
-                <img src="{{ asset('images/' . $item['image']) }}" alt="Portfolio Item"
+                <div class="rounded-4 overflow-hidden shadow-sm h-100 bg-white portfolio-card" data-bs-toggle="modal" data-bs-target="#portfolioModal{{ $portfolio->id }}" style="cursor:pointer;">
+                    <img src="{{ $portfolio->image }}" alt="Portfolio Item"
                   class="img-fluid w-100"
                   style="height: 250px; object-fit: cover; border-radius: 24px;">
                 <p class="fw-semibold text-center" style="color: #7a5c3d; margin-top: 8px; margin-bottom: 24px;">
-                  {{ $item['caption'] }}
-                </p>
+                        {{ $portfolio->title }}
+                    </p>
+                </div>
+            </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="portfolioModal{{ $portfolio->id }}" tabindex="-1" aria-labelledby="portfolioModalLabel{{ $portfolio->id }}" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="portfolioModalLabel{{ $portfolio->id }}">{{ $portfolio->title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ $portfolio->image }}" alt="Portfolio Image" class="img-fluid mb-3 w-100" style="border-radius: 16px; object-fit: cover; max-height: 350px;">
+                            <div class="text-secondary">
+                                {!! $portfolio->description ?? '<em>Tidak ada deskripsi.</em>' !!}
+                            </div>
+                        </div>
+                    </div>
               </div>
             </div>
           @endforeach
