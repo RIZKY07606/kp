@@ -58,7 +58,7 @@
             <div class="col-12 mt-5">
                 <div class="border-top pt-4 text-center">
                     <p class="text-muted mb-0">
-                        &copy; {{ date('Y') }} mugsithiving. All rights reserved
+                        &copy; {{ date('Y') }} muqsithliving. All rights reserved
                     </p>
                 </div>
             </div>
