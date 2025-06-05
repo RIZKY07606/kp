@@ -38,19 +38,22 @@
   <!-- Kolom kiri: Visi dan Misi -->
   <div class="col-md-6 d-flex flex-column justify-content-between gap-4">
     <!-- VISI -->
-    <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: #f8e9d7;">
-      <h5 class="fw-bold mb-2 text-center fs-4">Visi</h5>
-      <p class="mb-0 text-muted text-center fs-6">
+   <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: #f8e9d7;">
+    <h5 class="fw-bold mb-2 text-center fs-4">
+        Visi
+    </h5>
+    <p class="mb-0 text-center fs-6" style="color: #7a5c3d;">
         Mewujudkan hunian dan ruang usaha yang mendukung kehidupan<br>
         islami dan penuh keberkahan, lewat desain yang fungsional, estetis,<br>
         dan syar’i.
-      </p>
-    </div>
+    </p>
+</div>
+
 
     <!-- MISI -->
     <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: #f8e9d7;">
       <h5 class="fw-bold mb-2 text-center fs-4">Misi</h5>
-      <p class="mb-0 text-muted text-center fs-6">
+      <p class="mb-0 text-center fs-6" style="color: #7a5c3d;">
         Mengedukasi masyarakat tentang pentingnya desain islami<br>
         Memberikan layanan arsitektur & interior yang profesional dan bernilai<br>
         Menjadi mitra pembangunan yang jujur dan amanah
