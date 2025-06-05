@@ -196,14 +196,48 @@
     .skematik-modal { max-width: 98vw; }
     .skematik-grid { grid-template-columns: 1fr; }
 }
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+
 </style>
 @endpush
 
 @section('content')
-<div class="service-hero-container">
-    <img src="/images/contact-hero.jpg" alt="Service Hero" class="service-hero">
-    <div class="service-title">Service</div>
+<div class="hero-container">
+  <img src="/images/contact-hero.jpg" alt="Service" class="hero-image">
+  <h1 class="hero-title">Service</h1>
 </div>
+
+
+
 <div class="service-tabs">
     <div class="service-tab" id="tab-rab">Rencana Anggaran Biaya</div>
     <div class="service-tab inactive" id="tab-ad">Anggaran Desain</div>
