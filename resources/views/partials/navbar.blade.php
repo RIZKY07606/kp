@@ -1,6 +1,7 @@
 <style>
     .navbar-nav .nav-link {
         transition: all 0.1s ease;
+        font-size: 1.1rem; 
     }
 
     .navbar-nav .nav-link:hover {
@@ -12,6 +13,10 @@
      .navbar-nav .nav-link.active {
         color: #000000 !important;
         font-weight: 500;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; 
     }
 
 </style>
