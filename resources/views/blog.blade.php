@@ -40,6 +40,7 @@
     flex-direction: column;
     align-items: center;
     transition: box-shadow 0.2s;
+    overflow: hidden;
 }
 .blog-card:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -57,12 +58,20 @@
     margin-bottom: 0.5rem;
     text-align: left;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .blog-card-desc {
     font-size: 0.95rem;
     color: #7A7A7A;
     text-align: left;
     width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
 }
 @media (max-width: 600px) {
     .blog-hero {
