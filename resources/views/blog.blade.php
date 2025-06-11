@@ -97,11 +97,13 @@
 
 <div class="blog-cards">
     @foreach ($blogs as $blog)
-    <div class="blog-card">
-        <img src="{{ $blog->cover_image }}" alt="Blog Post" class="blog-card-img">
-        <div class="blog-card-title">{{ $blog->title }}</div>
-        <div class="blog-card-desc">{{ Str::limit(strip_tags($blog->content), 120) }}</div>
-    </div>
+    <a href="{{ route('blog.show', $blog->slug) }}" class="text-decoration-none">
+        <div class="blog-card">
+            <img src="{{ $blog->cover_image }}" alt="Blog Post" class="blog-card-img">
+            <div class="blog-card-title">{{ $blog->title }}</div>
+            <div class="blog-card-desc">{{ Str::limit(strip_tags($blog->content), 120) }}</div>
+        </div>
+    </a>
     @endforeach
 </div>
 @endsection 
