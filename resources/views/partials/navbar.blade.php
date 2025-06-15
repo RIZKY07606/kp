@@ -57,7 +57,7 @@
             </ul>
 
         <div class="ms-lg-3">
-            <a href="/konsultasi" class="btn-konsultasi">
+            <a href="https://wa.me/6285158640334?text=Halo%2C%20saya%20ingin%20konsultasi"class="btn-konsultasi">
                     Konsultasi Gratis
         </a>
         </div>
