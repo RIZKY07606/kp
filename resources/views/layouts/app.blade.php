@@ -8,6 +8,8 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         /* Flexbox Setup */
         html, body {
@@ -94,6 +96,10 @@
         }
         #backToTopBtn:hover {
             background: #756857;
+        }
+
+        html, body, * {
+            font-family: 'Nunito', Arial, sans-serif !important;
         }
     </style>
     

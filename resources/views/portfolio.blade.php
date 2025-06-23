@@ -53,3 +53,35 @@
 </div>
 
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const highlight = params.get('highlight');
+    if (highlight) {
+        const modal = document.getElementById('portfolioModal' + highlight);
+        if (modal) {
+            const bsModal = new bootstrap.Modal(modal);
+            bsModal.show();
+        }
+    }
+});
+</script>
+@endpush
+
+@push('styles')
+<style>
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    padding: 16px 18px 16px 18px;
+}
+.modal-body > div {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+</style>
+@endpush
