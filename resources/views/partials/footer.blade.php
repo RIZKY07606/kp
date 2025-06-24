@@ -26,7 +26,7 @@
                         <li class="mb-2"><a href="/service">Service</a></li>
                         <li class="mb-2"><a href="/blog">Blog</a></li>
                         <li><a href="/contact">Contact</a></li>
-                    </ul>
+                            </ul>
                 </div>
             </div>
             <div class="col-12 mt-4">

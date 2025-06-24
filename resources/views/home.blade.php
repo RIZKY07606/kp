@@ -209,7 +209,7 @@
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
             <h2 class="fw-bold" style="font-family:'Nunito',Arial,sans-serif; font-size:2.5rem; color:#111; margin-bottom:0;">Dokumentasi Karya Kami</h2>
             <a href="/portfolio" class="btn btn-sm" style="background:#8B7B69; color:#fff; font-family:'Nunito',Arial,sans-serif; font-weight:600; border-radius:24px; padding:10px 32px; font-size:1.1rem;">Lihat Lainnya</a>
-        </div>
+            </div>
         <div class="dokumentasi-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0;">
             @foreach($portfolios as $portfolio)
                 <a href="/portfolio?highlight={{ $portfolio->id }}" style="overflow:hidden; border-radius:24px; display:block;">
@@ -313,38 +313,38 @@
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/images/calculator.svg" alt="Jasa Hitung RAB / Gambar Kerja" style="height:40px; width:40px; object-fit:contain; display:block; margin:0 auto;" />
-                </div>
+    </div>
                 <div class="service-card-title">Jasa Hitung RAB / Gambar Kerja</div>
                 <div class="service-card-desc">Menyediakan perhitungan Rencana Anggaran Biaya (RAB) proyek secara rinci, plus gambar kerja teknik yang siap digunakan oleh kontraktor di lapangan.</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/images/sofa-solid.svg" alt="Jasa Pembuatan Furniture" style="height:40px; width:40px; object-fit:contain; display:block; margin:0 auto;" />
-                </div>
+    </div>
                 <div class="service-card-title">Jasa Pembuatan Furniture</div>
                 <div class="service-card-desc">Pembuatan furniture custom yang selaras dengan desain interior-baik untuk ruang tamu, dapur, kamar, maupun ruang ibadah di rumah.</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/images/helmet-safety-solid.svg" alt="Kontraktor dan Renovasi bangunan" style="height:40px; width:40px; object-fit:contain; display:block; margin:0 auto;" />
-                </div>
+    </div>
                 <div class="service-card-title">Kontraktor dan Renovasi bangunan</div>
                 <div class="service-card-desc">Pelaksanaan pembangunan dari desain yang telah dibuat-dengan tenaga ahli yang amanah dan profesional. Termasuk jasa renovasi total untuk bangunan lama.</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/images/cube-solid.svg" alt="Visualisasi Arsitektur dan Interior" style="height:40px; width:40px; object-fit:contain; display:block; margin:0 auto;" />
-                </div>
+    </div>
                 <div class="service-card-title">Visualisasi Arsitektur dan Interior</div>
                 <div class="service-card-desc">Menyediakan tampilan visual 3D realistis dari desain yang dirancang-untuk memudahkan klien membayangkan hasil akhir sebelum pembangunan dimulai.</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/images/Vector.svg" alt="Renovasi Rumah" style="height:40px; width:40px; object-fit:contain; display:block; margin:0 auto;" />
-                </div>
+    </div>
                 <div class="service-card-title">Jasa Renovasi Rumah</div>
                 <div class="service-card-desc">Fokus pada perbaikan atau pembaruan rumah yang sudah ada. Bisa berupa pengubahan layout, penambahan ruangan, atau penyegaran tampilan rumah agar lebih nyaman.</div>
-            </div>
+    </div>
         </div>
     </div>
 </section>

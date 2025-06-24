@@ -19,6 +19,14 @@
         font-size: 1.2rem; 
     }
 
+    @media (max-width: 991px) {
+        .navbar-nav .nav-item:last-child {
+            margin-bottom: 18px;
+        }
+        .ms-lg-3 {
+            margin-top: 18px !important;
+        }
+    }
 </style>
 
 
