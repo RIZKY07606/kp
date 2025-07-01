@@ -62,7 +62,7 @@ Route::post('/send-whatsapp', function (Request $request) {
     }
 
    
-    $phone = '6285158640334'; // Ganti dengan nomor WA tujuan tanpa spasi tanpa +
+    $phone = '628974921700'; // Ganti dengan nomor WA tujuan tanpa spasi tanpa +
     $url = "https://wa.me/{$phone}?text=" . $message;
 
     return redirect()->away($url);
