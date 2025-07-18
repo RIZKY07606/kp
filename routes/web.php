@@ -92,7 +92,7 @@ Route::post('/send-contact', function (Request $request) {
     ]);
     try {
         Mail::raw($body, function ($message) use ($request) {
-            $message->to('ranggaadisyah56@gmail.com')
+            $message->to('your_email@gmail.com')
                     ->subject('Pesan dari Form Kontak Website');
             if ($request->filled('email')) {
                 $message->replyTo($request->input('email'), $request->input('nama', 'Pengirim Website'));
