@@ -54,11 +54,14 @@
         color: #000;
     }
     .hero-img {
-        width: 501px;
-        height: 264px;
+        width: 1312px;
+        max-width: 100%;
+        height: 400px;
         object-fit: cover;
-        border-radius: 40px;
+        border-radius: 64px;
         display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .hero-right {
         display: flex;
@@ -120,7 +123,7 @@
 <div class="position-relative">
     <img src="{{ asset('images/contact-hero.jpg') }}" alt="Contact Hero" 
          class="img-fluid w-100"
-         style="height: 300px; object-fit: cover; border-radius: 64px;">
+         style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
    <div class="position-absolute bottom-0 start-50 translate-middle-x text-white text-center w-100">
     <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">
         Wujudkan Hunian Syar'i<br>Untuk Anda dan Keluarga
@@ -138,8 +141,8 @@
                     Mengedepankan Estetika <br>
                     dan Keberkahan – Muqshit Living
                 </h2>
-                <img src="{{ asset('images/contact-hero.jpg') }}" alt="Desain Rumah Modern"
-     class="rounded-4 mt-3" style="border-radius: 20px; width: 90%; max-width: 100%;">
+                <img src="images/contact-hero.jpg" alt="Desain Rumah Modern"
+     class="rounded-4 mt-3" style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
             </div>
 
             <!-- KANAN: Deskripsi + Fitur -->
@@ -204,7 +207,7 @@
     $portfolios = \App\Models\Portfolio::latest()->take(4)->get();
 @endphp
 <!-- Dokumentasi Karya Kami Section -->
-<section class="dokumentasi-section" style="width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; background:#fff; padding:56px 0 32px 0;">
+<section class="dokumentasi-section" style="background:#fff; padding:56px 0 32px 0;">
     <div class="container" style="max-width:1400px;">
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
             <h2 class="fw-bold" style="font-family:'Nunito',Arial,sans-serif; font-size:2.5rem; color:#111; margin-bottom:0;">Dokumentasi Karya Kami</h2>

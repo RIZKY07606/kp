@@ -6,11 +6,15 @@
 <link rel="stylesheet" href="/css/blog.css">
 <style>
 .blog-hero {
-    width: 100%;
-    height: 300px;
+    width: 1312px;
+    max-width: 100%;
+    height: 400px;
     object-fit: cover;
-    border-radius: 32px;
+    border-radius: 64px;
     margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .blog-title {
     position: absolute;

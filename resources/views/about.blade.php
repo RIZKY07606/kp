@@ -6,7 +6,7 @@
 <div class="position-relative">
     <img src="{{ asset('images/contact-hero.jpg') }}" alt="Contact Hero" 
          class="img-fluid w-100"
-         style="height: 300px; object-fit: cover; border-radius: 64px;">
+         style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
    <div class="position-absolute bottom-0 start-50 translate-middle-x text-white text-center w-100">
     <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">
         Tentang Kami
@@ -20,7 +20,7 @@
   <div class="row align-items-center mb-5">
     <!-- Gambar Kiri -->
     <div class="col-md-6 mb-4 mb-md-0">
-      <img src="images/contact-hero.jpg" alt="Ruangan" class="img-fluid rounded-4 w-100">
+      <img src="images/contact-hero.jpg" alt="Ruangan" class="img-fluid w-100" style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
     </div>
 
     <!-- Teks Kanan -->
@@ -65,7 +65,7 @@
   <div class="col-md-6">
     <div class="h-100 w-100 overflow-hidden rounded-4 shadow-sm" style="min-height: 100%;">
       <img src="images/contact-hero.jpg" alt="Interior Desain"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-4">
+        class="img-fluid w-100 h-100 object-fit-cover" style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
     </div>
   </div>
 </div>

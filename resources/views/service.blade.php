@@ -199,19 +199,23 @@
 
 .hero-container {
   position: relative;
-  width: 100%;
-  height: 320px;
-  border-radius: 32px;
+  width: 1312px;
+  max-width: 100%;
+  height: 400px;
+  border-radius: 64px;
   overflow: hidden;
   margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 .hero-image {
-  width: 100%;
-  height: 100%;
+  width: 1312px;
+  max-width: 100%;
+  height: 400px;
   object-fit: cover;
-  border-radius: 32px;
+  border-radius: 64px;
 }
 
 .hero-title {

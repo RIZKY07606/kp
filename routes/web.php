@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PortfolioController;
+use Illuminate\Support\Facades\Mail;
+use App\Models\ContactLog;
 
 
 /*
@@ -40,30 +42,68 @@ Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio
 
 Route::view('/contact', 'contact')->name('contact');
 
-Route::post('/send-whatsapp', function (Request $request) {
+Route::post('/send-contact', function (Request $request) {
+    $request->validate([
+        'email' => 'required|email',
+        'nama' => 'required|string',
+    ], [
+        'email.required' => 'Email wajib diisi',
+        'email.email' => 'Format email tidak valid',
+        'nama.required' => 'Nama wajib diisi',
+    ]);
+
     $data = [
-        'Nama' => $request->input('nama'),
-        'Email' => $request->input('email'),
-        'Alamat' => $request->input('alamat'),
-        'Provinsi' => $request->input('provinsi'),
-        'Kota' => $request->input('kota'),
-        'Kecamatan' => $request->input('kecamatan'),
-        'Kelurahan' => $request->input('kelurahan'),
-        'Kode Pos' => $request->input('kode_pos'),
-        'RT' => $request->input('rt'),
-        'RW' => $request->input('rw'),
-        'Pesan' => $request->input('pesan'),
+        'nama' => $request->input('nama', '-'),
+        'email' => $request->input('email', '-'),
+        'alamat' => $request->input('alamat', '-'),
+        'provinsi' => $request->input('provinsi', '-'),
+        'kota' => $request->input('kota', '-'),
+        'kecamatan' => $request->input('kecamatan', '-'),
+        'kelurahan' => $request->input('kelurahan', '-'),
+        'kode_pos' => $request->input('kode_pos', '-'),
+        'rt' => $request->input('rt', '-'),
+        'rw' => $request->input('rw', '-'),
+        'pesan' => $request->input('pesan', '-'),
     ];
 
-    $message = '';
-    foreach ($data as $key => $value) {
-        $value = $value ?? '-';
-        $message .= "*{$key}:* {$value}%0A";
+    $labels = [
+        'nama' => 'Nama',
+        'email' => 'Email',
+        'alamat' => 'Alamat',
+        'provinsi' => 'Provinsi',
+        'kota' => 'Kota',
+        'kecamatan' => 'Kecamatan',
+        'kelurahan' => 'Kelurahan',
+        'kode_pos' => 'Kode Pos',
+        'rt' => 'RT',
+        'rw' => 'RW',
+        'pesan' => 'Pesan',
+    ];
+
+    $body = "";
+    foreach ($labels as $key => $label) {
+        $value = $data[$key] ?? '-';
+        $body .= "{$label}: {$value}\n";
     }
 
-   
-    $phone = '6285158640334'; // Ganti dengan nomor WA tujuan tanpa spasi tanpa +
-    $url = "https://wa.me/{$phone}?text=" . $message;
-
-    return redirect()->away($url);
-})->name('send.whatsapp');
+    $logData = array_merge($data, [
+        'status' => 'sukses',
+        'error_message' => null,
+    ]);
+    try {
+        Mail::raw($body, function ($message) use ($request) {
+            $message->to('ranggaadisyah56@gmail.com')
+                    ->subject('Pesan dari Form Kontak Website');
+            if ($request->filled('email')) {
+                $message->replyTo($request->input('email'), $request->input('nama', 'Pengirim Website'));
+            }
+        });
+    } catch (\Exception $e) {
+        $logData['status'] = 'gagal';
+        $logData['error_message'] = $e->getMessage();
+        ContactLog::create($logData);
+        return back()->withErrors(['email' => 'Gagal mengirim email: ' . $e->getMessage()]);
+    }
+    ContactLog::create($logData);
+    return back()->with('success', 'Pesan Anda berhasil dikirim!');
+})->name('send.contact');
