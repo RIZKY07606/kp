@@ -142,7 +142,7 @@
                     dan Keberkahan – Muqshit Living
                 </h2>
                 <img src="images/contact-hero.jpg" alt="Desain Rumah Modern"
-     class="rounded-4 mt-3" style="width: 501px; max-width: 100%; height: 264px; object-fit: cover; border-radius: 40px; display: block;">
+     class="mt-3" style="width: 501px; max-width: 100%; height: 264px; object-fit: cover; border-radius: 40px; display: block;">
             </div>
 
             <!-- KANAN: Deskripsi + Fitur -->
