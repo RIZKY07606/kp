@@ -136,13 +136,13 @@
         <div class="row align-items-start">
             <!-- KIRI: Judul + Gambar -->
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-4">
+                <h2 class="fw-bold mb-4" style="max-width: 501px; width: 100%; text-align: left;">
                     Arsitektur yang <br>
                     Mengedepankan Estetika <br>
                     dan Keberkahan – Muqshit Living
                 </h2>
                 <img src="images/contact-hero.jpg" alt="Desain Rumah Modern"
-     class="rounded-4 mt-3" style="width: 1312px; max-width: 100%; height: 400px; object-fit: cover; border-radius: 64px; display: block; margin-left: auto; margin-right: auto;">
+     class="rounded-4 mt-3" style="width: 501px; max-width: 100%; height: 264px; object-fit: cover; border-radius: 40px; display: block;">
             </div>
 
             <!-- KANAN: Deskripsi + Fitur -->
@@ -352,48 +352,6 @@
     </div>
 </section>
 
-<!-- HERO SECTION -->
-<div class="hero-section">
-    <div class="hero-left">
-        <div class="hero-title">Arsitektur yang Mengedepankan Estetika dan Keberkahan - Muqsith Living</div>
-        <img src="/images/contact-hero.jpg" alt="Desain Rumah Modern" class="hero-img" />
-    </div>
-    <div class="hero-right">
-        <div class="hero-desc">
-            Perusahaan jasa desain arsitektur interior dan kontraktor yang bisa memberikan hasil maksimal, efisien, ramah lingkungan, dan insyaAllah mengamalkan syariat Islam dan semua pekerjaannya. Kami mengintegrasikan prinsip desain modern dengan nilai-nilai syar'i, demi menghadirkan hunian yang menenangkan, nyaman, dan penuh keberkahan.
-        </div>
-        <div class="hero-features">
-            <div class="hero-feature-item">
-                <span class="hero-feature-icon"><img src="/images/pen-ruler-solid.svg" alt="Desain Custom" style="height:28px;width:28px;object-fit:contain;" /></span>
-                <div>
-                    <div class="hero-feature-title">Desain Custom</div>
-                    <div class="hero-feature-desc">Muqsith Living menyediakan desain secara custom untuk perseorangan, baik arsitektur maupun interior dengan budget yang ramah di kantong.</div>
-                </div>
-            </div>
-            <div class="hero-feature-item">
-                <span class="hero-feature-icon"><img src="/images/boxes-stacked-solid.svg" alt="Bundling Desain" style="height:28px;width:28px;object-fit:contain;" /></span>
-                <div>
-                    <div class="hero-feature-title">Bundling Desain</div>
-                    <div class="hero-feature-desc">Kami menerima paket kerjasama desain untuk developer atau corporate untuk berkolaborasi dan bekerjasama dengan kami.</div>
-                </div>
-            </div>
-            <div class="hero-feature-item">
-                <span class="hero-feature-icon"><img src="/images/helmet-safety-solid.svg" alt="Build" style="height:28px;width:28px;object-fit:contain;" /></span>
-                <div>
-                    <div class="hero-feature-title">Build</div>
-                    <div class="hero-feature-desc">Kita akan menjadi partner dalam pembuatan konstruksi bangunan dan interior, juga melayani custom furniture.</div>
-                </div>
-            </div>
-            <div class="hero-feature-item">
-                <span class="hero-feature-icon"><img src="/images/book-quran-solid.svg" alt="Desain Berbasis Syariat" style="height:28px;width:28px;object-fit:contain;" /></span>
-                <div>
-                    <div class="hero-feature-title">Desain Berbasis Syariat</div>
-                    <div class="hero-feature-desc">Kami tidak hanya menciptakan desain yang fungsional, dan estetik, tapi juga mempertimbangkan aspek syariat dalam setiap bangunan dan pekerjaan.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
 
 

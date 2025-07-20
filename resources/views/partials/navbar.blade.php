@@ -33,7 +33,7 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+            <img src="images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top">
             Muqsith Living
         </a>
         
