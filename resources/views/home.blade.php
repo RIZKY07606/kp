@@ -206,22 +206,35 @@
 @php
     $portfolios = \App\Models\Portfolio::latest()->take(4)->get();
 @endphp
+
 <!-- Dokumentasi Karya Kami Section -->
 <section class="dokumentasi-section" style="background:#fff; padding:56px 0 32px 0;">
     <div class="container" style="max-width:1400px;">
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
-            <h2 class="fw-bold" style="font-family:'Nunito',Arial,sans-serif; font-size:2.5rem; color:#111; margin-bottom:0;">Dokumentasi Karya Kami</h2>
-            <a href="/portfolio" class="btn btn-sm" style="background:#8B7B69; color:#fff; font-family:'Nunito',Arial,sans-serif; font-weight:600; border-radius:24px; padding:10px 32px; font-size:1.1rem;">Lihat Lainnya</a>
-            </div>
-        <div class="dokumentasi-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0;">
+            <h2 class="fw-bold" style="font-family:'Nunito',Arial,sans-serif; font-size:2.5rem; color:#111; margin-bottom:0;">
+                Dokumentasi Karya Kami
+            </h2>
+            <a href="/portfolio" class="btn btn-sm" style="background:#8B7B69; color:#fff; font-family:'Nunito',Arial,sans-serif; font-weight:600; border-radius:24px; padding:10px 32px; font-size:1.1rem;">
+                Lihat Lainnya
+            </a>
+        </div>
+        <div class="dokumentasi-grid"
+             style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 16px;
+             ">
             @foreach($portfolios as $portfolio)
                 <a href="/portfolio?highlight={{ $portfolio->id }}" style="overflow:hidden; border-radius:24px; display:block;">
-                    <img src="{{ $portfolio->image }}" alt="{{ $portfolio->title }}" style="width:100%; height:320px; object-fit:cover; border-radius:24px; display:block;" />
+                    <img src="{{ asset('storage/' . $portfolio->image) }}" 
+                         alt="{{ $portfolio->title }}" 
+                         style="width:100%; height:320px; object-fit:cover; border-radius:24px; display:block;" />
                 </a>
             @endforeach
         </div>
     </div>
 </section>
+
 <style>
 .dokumentasi-section h2 {
     font-family: 'Nunito', Arial, sans-serif;

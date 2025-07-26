@@ -102,11 +102,19 @@
 <div class="blog-cards">
     @foreach ($blogs as $blog)
     <a href="{{ route('blog.show', $blog->slug) }}" class="text-decoration-none">
-        <div class="blog-card">
-            <img src="{{ $blog->cover_image }}" alt="Blog Post" class="blog-card-img">
-            <div class="blog-card-title">{{ $blog->title }}</div>
-            <div class="blog-card-desc">{{ Str::limit(strip_tags($blog->content), 120) }}</div>
-        </div>
+        <div class="blog-card rounded-4 overflow-hidden shadow-sm bg-white">
+    <div class="position-relative w-100" style="aspect-ratio: 4/3; overflow: hidden;">
+        <img src="{{ asset('storage/' . $blog->cover_image) }}" 
+             alt="Blog Post" 
+             class="w-100 h-100"
+             style="object-fit: cover;">
+    </div>
+    <div class="p-3">
+        <div class="blog-card-title fw-semibold fs-5 mb-2">{{ $blog->title }}</div>
+        <div class="blog-card-desc text-muted">{{ Str::limit(strip_tags($blog->content), 120) }}</div>
+    </div>
+</div>
+
     </a>
     @endforeach
 </div>

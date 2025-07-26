@@ -21,15 +21,26 @@
     <div class="row g-4">
         @foreach ($portfolios as $portfolio)
             <div class="col-md-6">
-                <div class="rounded-4 overflow-hidden shadow-sm h-100 bg-white portfolio-card" data-bs-toggle="modal" data-bs-target="#portfolioModal{{ $portfolio->id }}" style="cursor:pointer;">
-                    <img src="{{ $portfolio->image }}" alt="Portfolio Item"
-                  class="img-fluid w-100"
-                  style="height: 250px; object-fit: cover; border-radius: 24px;">
-                <p class="fw-semibold text-center" style="color: #7a5c3d; margin-top: 8px; margin-bottom: 24px;">
-                        {{ $portfolio->title }}
-                    </p>
-                </div>
-            </div>
+    <div class="rounded-4 overflow-hidden shadow-sm bg-white position-relative"
+         data-bs-toggle="modal"
+         data-bs-target="#portfolioModal{{ $portfolio->id }}"
+         style="cursor:pointer; aspect-ratio: 4/3;">
+
+        <!-- Gambar -->
+        <img src="{{ asset('storage/' . $portfolio->image) }}"
+             alt="Portfolio Item"
+             class="w-100 h-100"
+             style="object-fit: cover;">
+
+        <!-- Title Overlay -->
+        <div class="position-absolute bottom-0 w-100 text-center py-2"
+             style="background: rgba(255,255,255,0.8); color: #7a5c3d;">
+            <span class="fw-semibold">{{ $portfolio->title }}</span>
+        </div>
+    </div>
+</div>
+
+
 
             <!-- Modal -->
             <div class="modal fade" id="portfolioModal{{ $portfolio->id }}" tabindex="-1" aria-labelledby="portfolioModalLabel{{ $portfolio->id }}" aria-hidden="true">
@@ -40,7 +51,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="{{ $portfolio->image }}" alt="Portfolio Image" class="img-fluid mb-3 w-100" style="border-radius: 16px; object-fit: cover; max-height: 350px;">
+                            <img src="{{ asset('storage/' . $portfolio->image) }}" alt="Portfolio Image" class="img-fluid mb-3 w-100" style="border-radius: 16px; object-fit: cover; max-height: 350px;">
                             <div class="text-secondary">
                                 {!! $portfolio->description ?? '<em>Tidak ada deskripsi.</em>' !!}
                             </div>
